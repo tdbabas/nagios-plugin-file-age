@@ -15,7 +15,7 @@
 ################################################################################
 use warnings;
 use strict;
-use Nagios::Plugin;
+use Monitoring::Plugin;
 use File::Basename;
 use POSIX qw(strftime);
 use List::Util qw[max];
@@ -48,8 +48,8 @@ the script will try and find directories within a maximum period of time before 
 The script will try and find directories over the smallest period of time specified, so if #DAY# is given, it will
 search over $MAX_DAYS_BACK days, regardless of whether or not any other placeholders are specified);
 
-# Now create the new Nagios plugin
-my $nagios = Nagios::Plugin->new(shortname => $SHORT_NAME, usage => $usage_msg, version => $VERSION);
+# Now create the new Monitoring plugin
+my $nagios = Monitoring::Plugin->new(shortname => $SHORT_NAME, usage => $usage_msg, version => $VERSION);
 
 # Add command line arguments
 $nagios->add_arg("d=s", "-d <dir>\n   Directory to search for files in. Wildcards are permitted, but if used, enclose the directory in quotes", undef, 1);
@@ -225,7 +225,7 @@ find the age and the size of this file and compare this with specified threshold
 
 The following Perl modules are required in order for this script to work:
 
- * Nagios::Plugin;
+ * Monitoring::Plugin;
  * File::Basename;
  * POSIX qw(strftime);
  * List::Util qw[max];

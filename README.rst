@@ -36,7 +36,7 @@ The following Perl modules are required in order for this script to work:
 
 .. code-block:: perl
 
-  * Nagios::Plugin;
+  * Monitoring::Plugin;
   * File::Basename;
   * POSIX qw(strftime);
   * List::Util qw[max];
@@ -119,6 +119,7 @@ AUTHOR
 
 Tim Barnes <tdba[AT]bas.ac.uk> - British Antarctic Survey, Natural Environmental Research Council, UK
 
+updated to Monitoring by Andrew McGuinness <andrew@arobeia.co.uk> - Warden Hill Riding Club
 
 *********************
 COPYRIGHT AND LICENSE
